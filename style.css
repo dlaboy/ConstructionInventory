@@ -30,6 +30,10 @@ h2{
     font: 500;
     font-size: 3rem;
 }
+h3{
+    font-family: 'Exo 2', sans-serif;
+
+}
 .desc{
     font-family: 'Exo 2', sans-serif;
     font: 300;
@@ -80,4 +84,56 @@ h2{
 
 
 }
+.lupa{
+    height: 1.5rem;
+}
+.botoncito{
+    width: 15%;
+    padding: 15px 25px;
+    border-radius: 40px;
+}
+th{
+    font-family: 'Exo 2', sans-serif;
 
+}
+.caption{
+    color: grey;
+    font-size: .8rem;
+}
+.options{
+    height: 1.5rem;
+}
+.imgTable{
+    height: 2rem;
+}
+.searchbar{
+    background-color: rgb(102, 102, 102);
+}
+
+
+.tableText{
+    color: grey;
+
+}
+.navega{
+    min-height: 100vh;
+
+}
+.main-head{
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    
+    z-index: 3;
+}
+.helme{
+    height: 3rem;
+}
+.saidbal{
+    height: 1.8rem;
+}
+.name{
+    font-family: 'Exo 2', sans-serif;
+
+    font-size: 1rem;
+}
