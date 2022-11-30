@@ -312,13 +312,140 @@
         </div>
       </div>
       <div class="col d-flex flex-column w-75 h-100">
-        <button class="boton btn-warning border-0 p-4 m-3 mt-5 shadow">
+        <button
+          type="button"
+          class="boton btn-warning border-0 p-4 m-3 mt-5 shadow"
+          data-toggle="modal"
+          data-target="#exampleModalCenter"
+          data-backdrop="static"
+          autocomplete="off"
+          onclick="colorReseter()"
+        >
           New Project File
         </button>
+
+        <div
+          class="modal fade rounded-4"
+          id="exampleModalCenter"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3
+                  class="modal-title d-flex justify-content-center"
+                  id="exampleModalLongTitle"
+                >
+                  New Project File!
+                </h3>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                  onclick="colorReseter()"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="p-3" action="">
+                  <h4>Project Name</h4>
+                  <div class="form-group">
+                    <input type="text" class="form-control" />
+                  </div>
+                </form>
+                <form class="p-3" action="">
+                  <h4>Add Workers To Project</h4>
+                  <div class="form-group p-3">
+                    <input
+                      type="text"
+                      class="searchbar form-control border-1 p-2"
+                      placeholder="First Name"
+                      id="fName"
+                      required
+                    />
+                    <input
+                      type="text"
+                      class="searchbar form-control border-1 mt-3 mb-3 p-2"
+                      placeholder="Last Name"
+                      id="lName"
+                      required
+                    />
+                    <input
+                      type="text"
+                      class="searchbar form-control border-1 p-2"
+                      placeholder="Role"
+                      id="role"
+                      required
+                    />
+                  </div>
+                  <div class="d-flex justify-content-end rounded-end p-1">
+                    <button
+                      class="btn btn-dark"
+                      type="button"
+                      onclick="addRow()"
+                    >
+                      Add Worker
+                    </button>
+                  </div>
+                </form>
+                <div class="tab p-3">
+                  <table class="table" id="tab">
+                    <thead>
+                      <h4>Workers in project</h4>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Role</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <form action="./project_created.html" id="f">
+                  <input
+                    id="in"
+                    class="btn"
+                    type="submit"
+                    placeholder="Open Project"
+                    value=" Open Project"
+                    disabled
+                  />
+                  <button
+                    id="bot"
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="colorChange()"
+                  >
+                    Create Project
+                  </button>
+                </form>
+
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                  onclick="colorReseter()"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <button class="boton btn-dark border-0 p-4 m-3 shadow">
           New Project Folder
         </button>
       </div>
     </div>
   </body>
+  <script src="./workers.js"></script>
+  <script src="buttons.js"></script>
 </html>
